@@ -1,4 +1,4 @@
-<b> # FaceCrypt </b>
+# <b> FaceCrypt </b>
 
 <b>Secure Login and File Encryption Program</b>
 
