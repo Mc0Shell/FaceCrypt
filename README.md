@@ -1,6 +1,7 @@
 Secure Login and File Encryption Program
 
-This is a secure login and file encryption program that allows users to log in using their face, hand gesture, password, and optional pin via a TUI (Text-based User Interface). Once logged in, users can encrypt and decrypt files and folders using their login credentials.
+This is a secure login and file encryption program that allows users to log in using their face, hand gesture, password, and optional pin via a TUI (Text-based User Interface). 
+Once logged in, users can encrypt and decrypt files and folders using their login credentials.
 
 FEATURES
 
@@ -26,11 +27,14 @@ Install the required dependencies
 
 USAGE
 
-   To start the program, open a terminal or command prompt and navigate to the directory where you have cloned the repository. Then, run the following command:
+   To start the program, open a terminal or command prompt and navigate to the directory where you have cloned the repository. 
+   Then, run the following command:
 
     python3 face_login.py
 
-   When you first run the program, you will be prompted to create a new account. You will need to provide your name, your face, a hand gesture, a password, and an optional pin. These will be used for your secure login credentials.
+   When you first run the program, you will be prompted to create a new account. 
+   You will need to provide your name, your face, a hand gesture, a password, and an optional pin. 
+   These will be used for your secure login credentials.
 
    Once you have created your account, you can log from the main menu with face and optional hand gesture. 
    You will be prompted to enter your password and, if you have set up a pin, your pin as well.
