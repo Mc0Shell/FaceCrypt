@@ -16,13 +16,13 @@ INSTALLATION
 
 To install and use this program, follow these steps:
 
-Clone the repository to your local machine
+   Clone the repository to your local machine
 
-    git clone https://github.com/<your-username>/secure-login.git
+        git clone https://github.com/<your-username>/secure-login.git
 
-Install the required dependencies
-    
-    pip3 install -r requirements.txt
+   Install the required dependencies
+
+        pip3 install -r requirements.txt
     
   
   
@@ -32,7 +32,7 @@ USAGE
    To start the program, open a terminal or command prompt and navigate to the directory where you have cloned the repository. 
    Then, run the following command:
 
-    python3 face_login.py
+        python3 face_login.py
 
    When you first run the program, you will be prompted to create a new account. 
    You will need to provide your name, your face, a hand gesture, a password, and an optional pin. 
