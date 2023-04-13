@@ -71,7 +71,7 @@ To install and use this program, follow these steps:
 ![Istantanea_2023-04-13_18-34-26](https://user-images.githubusercontent.com/55066055/231826250-d3cb4e81-c0c2-419b-95b9-104805710592.png)
 
 
-![final](https://user-images.githubusercontent.com/55066055/231836004-99239c08-2394-4fa0-a72d-b60d5814557d.png)
+![Istantanea_2023-04-13_19-20-29](https://user-images.githubusercontent.com/55066055/231836225-72e2730d-d76f-4bcf-8c5c-71973e44b813.png)
 
 --------------------------------------------------------------------------------
 <b>Credits</b>
