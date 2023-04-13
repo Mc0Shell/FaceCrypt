@@ -5,6 +5,15 @@ Once logged in, users can encrypt and decrypt files and folders using their logi
 
 --------------------------------------------------------------------------------
 
+STATUS: Under developing
+
+   Next update: 
+      - Auth Config section
+      - More hand gesture
+      - More speed
+
+--------------------------------------------------------------------------------
+
 FEATURES
 
    - Secure login using face, hand gesture, password, and optional pin
