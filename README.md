@@ -5,7 +5,7 @@ Once logged in, users can encrypt and decrypt files and folders using their logi
 
 --------------------------------------------------------------------------------
 
-STATUS: Under developing
+<b>STATUS</b>: Under developing
 
    Next update: 
    
