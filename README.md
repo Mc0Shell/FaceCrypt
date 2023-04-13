@@ -8,9 +8,10 @@ Once logged in, users can encrypt and decrypt files and folders using their logi
 STATUS: Under developing
 
    Next update: 
-      - Auth Config section
-      - More hand gesture
-      - More speed
+   
+   - Auth Config section
+   - More hand gesture
+   - More speed
 
 --------------------------------------------------------------------------------
 
