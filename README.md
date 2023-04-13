@@ -1,4 +1,4 @@
-Secure Login and File Encryption Program
+<b>Secure Login and File Encryption Program</b>
 
 This is a secure login and file encryption program that allows users to log in using their face, hand gesture, password, and optional pin via a TUI (Text-based User Interface). 
 Once logged in, users can encrypt and decrypt files and folders using their login credentials.
@@ -15,7 +15,7 @@ Once logged in, users can encrypt and decrypt files and folders using their logi
 
 --------------------------------------------------------------------------------
 
-FEATURES
+<b>FEATURES</b>
 
    - Secure login using face, hand gesture, password, and optional pin
    - Encrypt and decrypt files and folders using login credentials
@@ -24,7 +24,7 @@ FEATURES
     
 --------------------------------------------------------------------------------
 
-HOW IT WORKS
+<b>HOW IT WORKS</b>
 
    The program works by combining the facial recognition and hand gesture data with the user's password to generate a unique key that is used to encrypt and decrypt the user's files.
 
@@ -33,7 +33,7 @@ HOW IT WORKS
 
 --------------------------------------------------------------------------------
 
-INSTALLATION
+<b>INSTALLATION</b>
 
 To install and use this program, follow these steps:
 
@@ -48,7 +48,7 @@ To install and use this program, follow these steps:
   
 --------------------------------------------------------------------------------
 
-USAGE
+<b>USAGE</b>
 
    To start the program, open a terminal or command prompt and navigate to the directory where you have cloned the repository. 
    Then, run the following command:
@@ -70,7 +70,7 @@ USAGE
 
 
 --------------------------------------------------------------------------------
-Credits
+<b>Credits</b>
 
 This program was developed by Mc0Shell.
 
