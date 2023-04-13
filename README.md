@@ -41,7 +41,7 @@ To install and use this program, follow these steps:
 
    Clone the repository to your local machine
 
-    git clone https://github.com/<your-username>/secure-login.git
+    git clone https://github.com/Mc0Shell/FaceCrypt.git
 
    Install the required dependencies
 
