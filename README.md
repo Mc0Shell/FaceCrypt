@@ -10,6 +10,7 @@ FEATURES
     Lightweight and fast performance
     
     
+    
 
 INSTALLATION
 
@@ -23,7 +24,8 @@ Install the required dependencies
     
     pip3 install -r requirements.txt
     
-    
+  
+  
 
 USAGE
 
@@ -40,6 +42,8 @@ USAGE
    You will be prompted to enter your password and, if you have set up a pin, your pin as well.
 
    Once you have successfully logged in, you can encrypt and decrypt files and folders using the "Encryption" and "Decryption" options from the main menu.
+
+
 
 Credits
 
