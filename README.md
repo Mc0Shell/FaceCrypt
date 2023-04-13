@@ -7,9 +7,9 @@ Once logged in, users can encrypt and decrypt files and folders using their logi
 
 FEATURES
 
-    Secure login using face, hand gesture, password, and optional pin
-    Encrypt and decrypt files and folders using login credentials
-    Lightweight and fast performance
+   - Secure login using face, hand gesture, password, and optional pin
+   - Encrypt and decrypt files and folders using login credentials
+   - Lightweight and fast performance
     
     
 --------------------------------------------------------------------------------
