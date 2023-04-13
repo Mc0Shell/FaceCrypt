@@ -4,9 +4,9 @@ This is a secure login and file encryption program that allows users to log in u
 
 FEATURES
 
-   Secure login using face, hand gesture, password, and optional pin
-   Encrypt and decrypt files and folders using login credentials
-   Lightweight and fast performance
+    Secure login using face, hand gesture, password, and optional pin
+    Encrypt and decrypt files and folders using login credentials
+    Lightweight and fast performance
     
     
 
