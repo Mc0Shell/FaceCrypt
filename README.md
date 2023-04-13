@@ -24,6 +24,15 @@ FEATURES
     
 --------------------------------------------------------------------------------
 
+HOW IT WORKS
+
+   The program works by combining the facial recognition and hand gesture data with the user's password to generate a unique key that is used to encrypt and decrypt the user's files.
+
+   When a user logs in, the program captures their face and hand gesture data and combines it with their password using a one-way hashing algorithm. 
+   This creates a unique, encrypted key that is used to encrypt and decrypt the user's files.
+
+--------------------------------------------------------------------------------
+
 INSTALLATION
 
 To install and use this program, follow these steps:
