@@ -3,6 +3,8 @@ Secure Login and File Encryption Program
 This is a secure login and file encryption program that allows users to log in using their face, hand gesture, password, and optional pin via a TUI (Text-based User Interface). 
 Once logged in, users can encrypt and decrypt files and folders using their login credentials.
 
+--------------------------------------------------------------------------------
+
 FEATURES
 
     Secure login using face, hand gesture, password, and optional pin
@@ -10,7 +12,7 @@ FEATURES
     Lightweight and fast performance
     
     
-    
+--------------------------------------------------------------------------------
 
 INSTALLATION
 
@@ -25,7 +27,7 @@ To install and use this program, follow these steps:
     pip3 install -r requirements.txt
     
   
-  
+--------------------------------------------------------------------------------
 
 USAGE
 
@@ -43,7 +45,7 @@ USAGE
 
    Once you have successfully logged in, you can encrypt and decrypt files and folders using the "Encryption" and "Decryption" options from the main menu.
 
-
+--------------------------------------------------------------------------------
 
 Credits
 
