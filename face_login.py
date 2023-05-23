@@ -627,13 +627,15 @@ def checkFile(inputFile):
         print(colored("\n                              Error with folder path, press ENTER to retry ", "red"), end='', flush='True')
         return True
 
-def cryptFolder(filePath):
+def cryptFile(filePath):
     crArr = []
     tmpPassword = userData.clrPassword
+    filename = filePath.split("/")[-1]
 
     with open(filePath, 'rb') as f:
         ofile = f.read()
         encrypted = fernet.encrypt(ofile)
+        crFilename = fernet.encrypt(bytes(filename, "utf-8"))
     
         crText = strToInt(str(encrypted))
         crPassword = strToInt(tmpPassword)
@@ -664,9 +666,12 @@ def cryptFolder(filePath):
                 
     f.close()
     
-def decryptFolder(filePath):
+    os.rename(filePath, str(filePath.replace(filename, ''))+str(crFilename))
+    
+def decryptFile(filePath):
+    filename = filePath.split("/")[-1]
     tmpPassword = userData.clrPassword
-
+    dcFilename = fernet.decrypt(bytes(filename[2:-1], "utf-8"))
     crPassword = strToInt(tmpPassword)
 
     with open(filePath, 'r') as f:
@@ -699,6 +704,50 @@ def decryptFolder(filePath):
     #print(colored("         " + str(os.getpid()) + " - File: " + filePath, "green"), flush='True')
                 
     f.close()
+    
+    os.rename(filePath, str(filePath.replace(filename, ''))+str(dcFilename)[2:-1])
+    
+def checkArgv():
+    pathTrig = False
+    typeTrig = False
+    methodTrig = False
+    path = ""
+    method = ""
+    type = ""
+    
+    if ("-h" or "-help" or "--help" or "--h") in sys.argv:
+        print("""
+                         __________________________________________
+                        |                                          |
+                        |                # HELP                    |
+                        |                                          |
+                        |    @All options:                         |
+                        |                                          |
+                        |       -p -> Folder/File Path             |
+                        |       -t -> Method Type [crypt/decrypt]  |
+                        |       -k -> Data type [folder/file]      |
+                        |__________________________________________|\n
+            """)
+        quit(0)
+    
+    for par in sys.argv[1:]:
+        if typeTrig == True:
+            type = par
+            typeTrig = False
+        if pathTrig == True:
+            path = par
+            pathTrig = False
+        if methodTrig == True:
+            method = par
+            methodTrig = False
+        if par == "-p":
+            pathTrig = True
+        elif par == "-t":
+            methodTrig = True
+        elif par == "-k":
+            typeTrig = True    
+        
+    return path, method, type
 
 def init():
     global rootTK
@@ -714,74 +763,86 @@ def init():
 
         if(login()):     
             userDataLoad()
-        
-            while True: 
-                os.system('clear')
-                print(colored(banner, "yellow"))
-                printMenu(1)
-                action = getPress()
-                
-                if action == 'Q' or action == 'q':
-                    quit()
-                    
-                # TO DO
-                # Auth Config section
-                if action == '3' or action == '3':
-                    continue
-                
-                os.system('clear')
-                print(colored(banner, "yellow"))
-                printMenu(2)
-                atype = getPress()
-                
-                fileList = []  
-                
-                if(atype == '1'):
-                    filePath = filedialog.askdirectory()
-                    try:
-                        data = os.listdir(filePath)
-                    except:
+            
+            path, method, type = checkArgv()
+            atype = ""
+            action = ""
+            filePath = path
+            fileList = []
+            
+            while True:
+                if len(sys.argv) == 1:
+                    os.system("clear")
+                    print(colored(banner, "yellow"))
+                    printMenu(1)
+                    action = getPress()
+
+                    if action == "Q" or action == "q":
+                        quit()
+
+                    # TO DO
+                    # Auth Config section
+                    if action == "3" or action == "3":
                         continue
-                elif(atype == '2'):
-                    filePath = filedialog.askopenfilename()
-                    try:
-                        fileList.append(filePath)
-                    except:
+
+                    os.system("clear")
+                    print(colored(banner, "yellow"))
+                    printMenu(2)
+                    atype = getPress()
+
+                    if atype == "1":
+                        filePath = filedialog.askdirectory()
+                        try:
+                            data = os.listdir(filePath)
+                        except:
+                            continue
+                    elif atype == "2":
+                        fileList = filedialog.askopenfilenames()
+                    elif atype == "3":
                         continue
-                elif atype == '3':
-                    continue
-                  
-                for root, dirs, files in os.walk(filePath):
-                    for file in files:
-                        fileList.append(os.path.join(root, file))
-                
-                print("\n") 
+
+                if atype == "2" or type == "file":
+                    fileList.append(path)
+                elif atype == "1" or type == "folder":
+                    for root, dirs, files in os.walk(filePath):
+                        for file in files:
+                            fileList.append(os.path.join(root, file))
+                else:
+                    print(colored("     Invalid -k option, retry with 'folder' or 'file'\n", "red"))
+                    quit(0)
+
+                print("\n")
                 label = colored("         Processing..", "magenta")
-    
-                with PixelBar(label, suffix='%(percent)d%%', max = (len(fileList) if atype == '1' else 1)) as bar:
+                with PixelBar(
+                    label, suffix="%(percent)d%%", max=(len(fileList) if (atype == "1" or type == "folder") else 1)
+                ) as bar:
                     for file in fileList:
-                        if action == '1':
-                            if atype == '1':
-                                with concurrent.futures.ProcessPoolExecutor(max_workers=40) as executor:
-                                    future = executor.submit(cryptFolder(file))
-                                    bar.next()
-                            if atype == '2':
-                                cryptFolder(file)
-                                bar.next()
-                        elif action == '2':
-                            if atype == '1':
-                                with concurrent.futures.ProcessPoolExecutor(max_workers=40) as executor:
-                                    future = executor.submit(decryptFolder(file))
-                                    bar.next()
-                            if atype == '2':
-                                decryptFolder(file)
-                                bar.next()
-                           
-                    
-                                 
+                        if action == "1" or method == "crypt":
+                            cryptFile(file)
+                            bar.next()
+                        elif action == "2" or method == "decrypt":
+                            decryptFile(file)
+                            bar.next()
+                        else:
+                            print(
+                                colored(
+                                    "     Invalid -t option, retry with 'crypt' or 'decrypt'\n",
+                                    "red",
+                                )
+                            )
+                            quit(0)
+
                 print(colored("\n         # All data converted successfully", "magenta"))
-                print(colored("         Press ENTER to return Menu: ", "cyan"), end='', flush='True')
-                getch.getch()
+                if action == ("1" or "2"):
+                    print(
+                        colored("         Press ENTER to return Menu: ", "cyan"),
+                        end="",
+                        flush="True",
+                    )
+                    getch.getch()
+                else:
+                    quit(0)
+
                 
     
 init()
