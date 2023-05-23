@@ -67,7 +67,7 @@ To install and use this program, follow these steps:
 
    Once you have successfully logged in, you can encrypt and decrypt files and folders using the "Encryption" and "Decryption" options from the main menu.
    
-   For a fast using:
+   For a fast usage:
    
       python3 face_login.py -p /User/user/Documents/FolderToCrypt -t crypt -k folder
       
