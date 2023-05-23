@@ -22,6 +22,7 @@ Once logged in, users can encrypt and decrypt files and folders using their logi
    - Secure login using face, hand gesture, password, and optional pin
    - Encrypt and decrypt files and folders using login credentials
    - Lightweight and fast performance
+   - Inline shell parameters options added (Fast crypt/decrypt)
     
     
 --------------------------------------------------------------------------------
@@ -65,6 +66,20 @@ To install and use this program, follow these steps:
    You will be prompted to enter your password and, if you have set up a pin, your pin as well.
 
    Once you have successfully logged in, you can encrypt and decrypt files and folders using the "Encryption" and "Decryption" options from the main menu.
+   
+   For a fast using:
+   
+      python3 face_login.py -p /User/user/Documents/FolderToCrypt -t crypt -k folder
+      
+   or
+   
+      python3 face_login.py -p /User/user/Documents/FileToCrypt.txt -t crypt -k file
+      
+   All options:
+   
+      -p -> Folder/File Path
+      -t -> Method Type [crypt/decrypt]
+      -k -> Data type [folder/file]
 
 --------------------------------------------------------------------------------
 
