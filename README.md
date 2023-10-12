@@ -1,4 +1,4 @@
-# <b> FaceCrypt </b>
+#FaceCrypt 
 Secure Login and File Encryption Program
 
 This is a secure login and file encryption program that allows users to log in using their face, hand gesture, password, and optional pin via a TUI (Text-based User Interface). 
