@@ -1,5 +1,4 @@
-# <p align="center"><img src="https://github.com/Mc0Shell/FaceCrypt/assets/55066055/89cecc44-9435-4790-b254-a541a941d28f" alt="Image" width="300" height="300"></p>
-
+# <p align="center"><img src="https://github.com/Mc0Shell/FaceCrypt/assets/55066055/89cecc44-9435-4790-b254-a541a941d28f" alt="Image" width="400" height="400"></p>
 # FaceCrypt 
 Secure Login and File Encryption Program
 
