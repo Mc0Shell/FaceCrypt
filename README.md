@@ -1,6 +1,5 @@
 # <p align="center"><img src="https://github.com/Mc0Shell/FaceCrypt/assets/55066055/1979ac47-79c7-4569-a10a-f376d9b22571" alt="Image" width="400" height="400"></p>
 
-# FaceCrypt 
 Secure Login and File Encryption Program
 
 This is a secure login and file encryption program that allows users to log in using their face, hand gesture, password, and optional pin via a TUI (Text-based User Interface). 
